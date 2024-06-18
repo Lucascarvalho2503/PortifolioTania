@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Algoritmos de Ordenação | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Bem-vindo ao guia sobre Algoritmos de ordenação! Este documento tem como objetivo apresentar alguns algoritmos e um pouco de suas propiedades.  Introdução aos AlgoritmosBubble SortO Bubble Sort é um a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algoritmos de Ordenação">
+<meta property="og:url" content="https://lucascarvalho2503.github.io/PortifolioTania/2024/05/14/Algoritmos-de-Ordenacao/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Bem-vindo ao guia sobre Algoritmos de ordenação! Este documento tem como objetivo apresentar alguns algoritmos e um pouco de suas propiedades.  Introdução aos AlgoritmosBubble SortO Bubble Sort é um a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-14T22:22:07.000Z">
+<meta property="article:modified_time" content="2024-06-18T04:08:19.908Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/PortifolioTania/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/PortifolioTania/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/PortifolioTania/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/PortifolioTania/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/PortifolioTania/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/PortifolioTania/">Home</a>
+        
+          <a class="main-nav-link" href="/PortifolioTania/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/PortifolioTania/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lucascarvalho2503.github.io/PortifolioTania"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Algoritmos-de-Ordenacao" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/PortifolioTania/2024/05/14/Algoritmos-de-Ordenacao/" class="article-date">
+  <time class="dt-published" datetime="2024-05-14T22:22:07.000Z" itemprop="datePublished">2024-05-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Algoritmos de Ordenação
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Bem-vindo ao guia sobre Algoritmos de ordenação! Este documento tem como objetivo apresentar alguns algoritmos e um pouco de suas propiedades. </p>
+<h2 id="Introducao-aos-Algoritmos"><a href="#Introducao-aos-Algoritmos" class="headerlink" title="Introdução aos Algoritmos"></a>Introdução aos Algoritmos</h2><h4 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h4><p>O Bubble Sort é um algoritmo simples de ordenação. Ele percorre a lista várias vezes, comparando elementos adjacentes e trocando-os se estiverem na ordem errada. Esse processo é repetido até que a lista esteja completamente ordenada.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bubble_sort</span>(<span class="params">lista</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(lista)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n-i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> lista[j] &gt; lista[j+<span class="number">1</span>]:</span><br><span class="line">                lista[j], lista[j+<span class="number">1</span>] = lista[j+<span class="number">1</span>], lista[j]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso:</span></span><br><span class="line">arr = [<span class="number">64</span>, <span class="number">34</span>, <span class="number">25</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">11</span>, <span class="number">90</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Medindo o tempo de execução</span></span><br><span class="line">start_time = time.time()</span><br><span class="line">bubble_sort(arr)</span><br><span class="line">end_time = time.time()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, arr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Tempo de execução: <span class="subst">&#123;end_time - start_time&#125;</span> segundos&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Selection-Sort"><a href="#Selection-Sort" class="headerlink" title="Selection Sort"></a>Selection Sort</h4><p>O Selection Sort também é um algoritmo de ordenação simples. Ele divide a lista em duas partes: uma parte ordenada e outra não ordenada. A cada iteração, ele encontra o menor elemento da parte não ordenada e o coloca no final da parte ordenada.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">lista</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(lista)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        min_idx = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">if</span> lista[min_idx] &gt; lista[j]:</span><br><span class="line">                min_idx = j</span><br><span class="line">        lista[i], lista[min_idx] = lista[min_idx], lista[i]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso:</span></span><br><span class="line">arr = [<span class="number">64</span>, <span class="number">25</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">11</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Medindo o tempo de execução</span></span><br><span class="line">start_time = time.time()</span><br><span class="line">selection_sort(arr)</span><br><span class="line">end_time = time.time()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, arr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Tempo de execução: <span class="subst">&#123;end_time - start_time&#125;</span> segundos&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h4><p>O Insertion Sort é outro algoritmo simples de ordenação. Ele percorre a lista da esquerda para a direita, inserindo cada elemento na posição correta da parte ordenada da lista.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">insertion_sort</span>(<span class="params">lista</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(lista)):</span><br><span class="line">        key = lista[i]</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span> <span class="keyword">and</span> key &lt; lista[j]:</span><br><span class="line">            lista[j + <span class="number">1</span>] = lista[j]</span><br><span class="line">            j -= <span class="number">1</span></span><br><span class="line">        lista[j + <span class="number">1</span>] = key</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso:</span></span><br><span class="line">arr = [<span class="number">64</span>, <span class="number">34</span>, <span class="number">25</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">11</span>, <span class="number">90</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Medindo o tempo de execução</span></span><br><span class="line">start_time = time.time()</span><br><span class="line">insertion_sort(arr)</span><br><span class="line">end_time = time.time()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, arr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Tempo de execução: <span class="subst">&#123;end_time - start_time&#125;</span> segundos&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h4><p>O Merge Sort é um algoritmo de ordenação baseado em dividir para conquistar. Ele divide a lista em duas metades, ordena cada metade separadamente e então combina as duas metades ordenadas para obter a lista final ordenada.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">lista</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(lista) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(lista) // <span class="number">2</span></span><br><span class="line">        L = lista[:mid]</span><br><span class="line">        R = lista[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(L)</span><br><span class="line">        merge_sort(R)</span><br><span class="line"></span><br><span class="line">        i = j = k = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(L) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(R):</span><br><span class="line">            <span class="keyword">if</span> L[i] &lt; R[j]:</span><br><span class="line">                lista[k] = L[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                lista[k] = R[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(L):</span><br><span class="line">            lista[k] = L[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(R):</span><br><span class="line">            lista[k] = R[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso:</span></span><br><span class="line">arr = [<span class="number">38</span>, <span class="number">27</span>, <span class="number">43</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">82</span>, <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Medindo o tempo de execução</span></span><br><span class="line">start_time = time.time()</span><br><span class="line">merge_sort(arr)</span><br><span class="line">end_time = time.time()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, arr)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;Tempo de execução: <span class="subst">&#123;end_time - start_time&#125;</span> segundos&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lucascarvalho2503.github.io/PortifolioTania/2024/05/14/Algoritmos-de-Ordenacao/" data-id="clxjvzeb90001y4jc4dxl2ax5" data-title="Algoritmos de Ordenação" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/PortifolioTania/2024/06/17/algoritmos/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Comparação dos algoritmos
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/PortifolioTania/Arquivos/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/PortifolioTania/Arquivos/2024/05/">May 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/PortifolioTania/2024/06/17/algoritmos/">Comparação dos algoritmos</a>
+          </li>
+        
+          <li>
+            <a href="/PortifolioTania/2024/05/14/Algoritmos-de-Ordenacao/">Algoritmos de Ordenação</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/PortifolioTania/" class="mobile-nav-link">Home</a>
+  
+    <a href="/PortifolioTania/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/PortifolioTania/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/PortifolioTania/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/PortifolioTania/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
